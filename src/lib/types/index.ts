@@ -1,6 +1,6 @@
 export interface Accommodation {
   name: string;
-  type: 'lodge' | 'tented-camp' | 'hotel' | 'boutique' | 'villa';
+  type: 'lodge' | 'tented-camp' | 'hotel' | 'boutique' | 'villa' | 'airbnb';
   image: string;
   rating?: number;
   description: string;

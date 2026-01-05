@@ -1,26 +1,35 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { 
-    Calendar, MapPin, Users, ChevronLeft, ChevronRight, 
-    Heart, Share2, ArrowUp, Check, X, MessageCircle
-  } from 'lucide-svelte';
-  import ItineraryDay from '$lib/components/ItineraryDay.svelte';
-  import BookingPanel from '$lib/components/BookingPanel.svelte';
-  import { safariPackages } from '$lib/data/safaris';
+  import { onMount } from "svelte";
+  import {
+    Calendar,
+    MapPin,
+    Users,
+    ChevronLeft,
+    ChevronRight,
+    Heart,
+    Share2,
+    ArrowUp,
+    Check,
+    X,
+    MessageCircle,
+  } from "lucide-svelte";
+  import ItineraryDay from "$lib/components/ItineraryDay.svelte";
+  import BookingPanel from "$lib/components/BookingPanel.svelte";
+  import { safariPackages } from "$lib/data/safaris";
 
   const safariPackage = safariPackages[0];
-  
+
   let expandedDay: number | null = 1;
   let selectedAddOns: string[] = [];
   let currentImageIndex = 0;
-  let activeTab = 'itinerary';
+  let activeTab = "itinerary";
   let showScrollTop = false;
 
   const allImages = [safariPackage.heroImage, ...safariPackage.galleryImages];
 
   function toggleAddOn(addOnId: string) {
     if (selectedAddOns.includes(addOnId)) {
-      selectedAddOns = selectedAddOns.filter(id => id !== addOnId);
+      selectedAddOns = selectedAddOns.filter((id) => id !== addOnId);
     } else {
       selectedAddOns = [...selectedAddOns, addOnId];
     }
@@ -31,28 +40,30 @@
   }
 
   function prevImage() {
-    currentImageIndex = currentImageIndex === 0 ? allImages.length - 1 : currentImageIndex - 1;
+    currentImageIndex =
+      currentImageIndex === 0 ? allImages.length - 1 : currentImageIndex - 1;
   }
 
   function nextImage() {
-    currentImageIndex = currentImageIndex === allImages.length - 1 ? 0 : currentImageIndex + 1;
+    currentImageIndex =
+      currentImageIndex === allImages.length - 1 ? 0 : currentImageIndex + 1;
   }
 
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   onMount(() => {
     const handleScroll = () => {
       showScrollTop = window.scrollY > 400;
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 </script>
 
 <svelte:head>
-  <title>{safariPackage.name} | ASIS Safaris</title>
+  <title>{safariPackage.name} | Asis Safaris</title>
   <meta name="description" content={safariPackage.tagline} />
 </svelte:head>
 
@@ -60,43 +71,36 @@
   <!-- Hero Section -->
   <section class="hero">
     {#key currentImageIndex}
-      <img 
-        src={allImages[currentImageIndex]} 
+      <img
+        src={allImages[currentImageIndex]}
         alt={safariPackage.name}
         class="hero-image"
       />
     {/key}
-    
-    <div class="hero-overlay"></div>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumbs container">
-      <a href="/">Home</a>
-      <span>/</span>
-      <a href="/safaris">Safaris</a>
-      <span>/</span>
-      <span class="current">{safariPackage.name}</span>
-    </nav>
+    <div class="hero-overlay"></div>
 
     <!-- Hero Content -->
     <div class="hero-content container">
       <span class="badge badge-sienna">{safariPackage.category}</span>
-      
+
       <h1>{safariPackage.name}</h1>
       <p class="tagline">{safariPackage.tagline}</p>
 
       <div class="hero-meta">
         <div class="meta-item">
           <Calendar size={20} />
-          <span>{safariPackage.duration} Days</span>
+          <span>More than {safariPackage.duration} Days</span>
         </div>
         <div class="meta-item">
           <MapPin size={20} />
-          <span>{safariPackage.destinations.join(' → ')}</span>
+          <span>{safariPackage.destinations.join("  ")}</span>
         </div>
         <div class="meta-item">
           <Users size={20} />
-          <span>{safariPackage.groupSize.min}-{safariPackage.groupSize.max} travelers</span>
+          <span
+            >{safariPackage.groupSize.min}-{safariPackage.groupSize.max} travelers</span
+          >
         </div>
       </div>
     </div>
@@ -114,10 +118,10 @@
     <!-- Image Indicators -->
     <div class="hero-indicators">
       {#each allImages as _, idx}
-        <button 
-          class="indicator" 
+        <button
+          class="indicator"
           class:active={idx === currentImageIndex}
-          on:click={() => currentImageIndex = idx}
+          on:click={() => (currentImageIndex = idx)}
         ></button>
       {/each}
     </div>
@@ -138,12 +142,14 @@
         <div class="quick-stats">
           <div class="stat">
             <span class="stat-label">Starting from</span>
-            <span class="stat-value">${safariPackage.startingPrice.toLocaleString()}</span>
-            <span class="stat-hint">per person</span>
+            <span class="stat-value"
+              >${safariPackage.startingPrice.toLocaleString()}</span
+            >
+            <!-- <span class="stat-hint">per group</span> -->
           </div>
           <div class="stat">
             <span class="stat-label">Duration</span>
-            <span class="stat-value">{safariPackage.duration}</span>
+            <span class="stat-value">> {safariPackage.duration}</span>
             <span class="stat-hint">days</span>
           </div>
           <div class="stat">
@@ -160,43 +166,43 @@
         <!-- Tabs -->
         <div class="tabs-container">
           <div class="tabs-header">
-            <button 
-              class="tab" 
-              class:active={activeTab === 'itinerary'}
-              on:click={() => activeTab = 'itinerary'}
+            <button
+              class="tab"
+              class:active={activeTab === "itinerary"}
+              on:click={() => (activeTab = "itinerary")}
             >
               Day by Day
             </button>
-            <button 
-              class="tab" 
-              class:active={activeTab === 'overview'}
-              on:click={() => activeTab = 'overview'}
+            <button
+              class="tab"
+              class:active={activeTab === "overview"}
+              on:click={() => (activeTab = "overview")}
             >
               Overview
             </button>
-            <button 
-              class="tab" 
-              class:active={activeTab === 'included'}
-              on:click={() => activeTab = 'included'}
+            <button
+              class="tab"
+              class:active={activeTab === "included"}
+              on:click={() => (activeTab = "included")}
             >
               What's Included
             </button>
           </div>
 
           <div class="tabs-content">
-            {#if activeTab === 'itinerary'}
+            {#if activeTab === "itinerary"}
               <!-- Route Preview -->
               <div class="route-preview">
                 {#each safariPackage.itinerary as day, idx}
-                  <button 
+                  <button
                     class="route-badge"
                     class:active={expandedDay === day.day}
-                    on:click={() => expandedDay = day.day}
+                    on:click={() => (expandedDay = day.day)}
                   >
                     {day.location}
                   </button>
                   {#if idx < safariPackage.itinerary.length - 1}
-                    <span class="route-arrow">→</span>
+                    <span class="route-arrow">.</span>
                   {/if}
                 {/each}
               </div>
@@ -204,14 +210,14 @@
               <!-- Day Cards -->
               <div class="days-list">
                 {#each safariPackage.itinerary as day}
-                  <ItineraryDay 
+                  <ItineraryDay
                     {day}
                     isExpanded={expandedDay === day.day}
                     onToggle={() => toggleDay(day.day)}
                   />
                 {/each}
               </div>
-            {:else if activeTab === 'overview'}
+            {:else if activeTab === "overview"}
               <div class="overview-content">
                 <div class="overview-section">
                   <h3>About This Journey</h3>
@@ -262,7 +268,7 @@
 
       <!-- Right Column - Booking Panel -->
       <div class="booking-column">
-        <BookingPanel 
+        <BookingPanel
           {safariPackage}
           {selectedAddOns}
           onAddOnToggle={toggleAddOn}
@@ -282,12 +288,14 @@
   <div class="mobile-cta">
     <div class="mobile-price">
       <span class="mobile-price-label">From</span>
-      <span class="mobile-price-value">${safariPackage.startingPrice.toLocaleString()}</span>
+      <span class="mobile-price-value"
+        >${safariPackage.startingPrice.toLocaleString()}</span
+      >
       <span class="mobile-price-hint">per person</span>
     </div>
-    <a 
-      href="https://wa.me/254700000000" 
-      target="_blank" 
+    <a
+      href="https://wa.me/254700000000"
+      target="_blank"
       rel="noopener noreferrer"
       class="btn btn-primary mobile-cta-btn"
     >
@@ -323,14 +331,22 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
   }
 
   .breadcrumbs {
@@ -342,11 +358,11 @@
     align-items: center;
     gap: 12px;
     font-size: 13px;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .breadcrumbs a {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
   }
 
@@ -374,7 +390,7 @@
 
   .tagline {
     font-size: 20px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     line-height: 1.6;
     font-weight: 300;
@@ -409,7 +425,7 @@
   .nav-btn {
     width: 44px;
     height: 44px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: none;
     color: white;
@@ -421,7 +437,7 @@
   }
 
   .nav-btn:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .hero-indicators {
@@ -437,7 +453,7 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     border: none;
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -459,7 +475,7 @@
   .action-btn {
     width: 44px;
     height: 44px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: none;
     color: white;

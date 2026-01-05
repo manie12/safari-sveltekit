@@ -8,12 +8,11 @@
   <div class="container header-inner">
     <!-- Logo -->
     <a href="/" class="logo">
-      ASIS <span>Safaris</span>
+      Asis <span>Safaris</span>
     </a>
 
     <!-- Desktop Navigation -->
     <nav class="nav-desktop">
-      <a href="/destinations">Destinations</a>
       <a href="/safaris">Safari Packages</a>
       <a href="/about">About Us</a>
     </nav>
@@ -22,10 +21,10 @@
     <div class="header-actions">
       <a href="tel:+254700000000" class="btn btn-ghost">
         <Phone size={16} />
-        +254 700 000 000
+        +254 703121351
       </a>
       <a 
-        href="https://wa.me/254700000000" 
+        href="https://wa.me/254703121351" 
         target="_blank" 
         rel="noopener noreferrer"
         class="btn btn-primary"
@@ -49,17 +48,16 @@
   {#if mobileMenuOpen}
     <div class="mobile-menu">
       <nav class="mobile-nav">
-        <a href="/destinations" on:click={() => mobileMenuOpen = false}>Destinations</a>
         <a href="/safaris" on:click={() => mobileMenuOpen = false}>Safari Packages</a>
         <a href="/about" on:click={() => mobileMenuOpen = false}>About Us</a>
       </nav>
       <div class="mobile-actions">
-        <a href="tel:+254700000000" class="btn btn-outline" style="width: 100%;">
+        <a href="tel:+254703121351" class="btn btn-outline" style="width: 100%;">
           <Phone size={20} />
           Call Us
         </a>
         <a 
-          href="https://wa.me/254700000000" 
+          href="https://wa.me/254703121351" 
           target="_blank" 
           rel="noopener noreferrer"
           class="btn btn-primary"
