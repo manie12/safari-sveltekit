@@ -326,8 +326,9 @@
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     animation: fadeIn 0.7s ease;
+    background: #f8f8f8;
   }
 
   @keyframes fadeIn {

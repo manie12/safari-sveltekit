@@ -1,411 +1,383 @@
-import type { SafariPackage, AddOn } from "$lib/types";
-
 export const optionalAddOns: AddOn[] = [
-  {
-    id: "balloon-safari",
-    name: "Hot Air Balloon Safari",
-    description:
-      "Float over the Masai Mara at sunrise, followed by a champagne bush breakfast",
-    price: 450,
-    duration: "3-4 hours",
-  },
-  {
-    id: "maasai-village",
-    name: "Maasai Village Cultural Visit",
-    description:
-      "Immerse yourself in traditional Maasai culture, dances, and craftsmanship",
-    price: 80,
-    duration: "2-3 hours",
-  },
-  {
-    id: "bush-dinner",
-    name: "Private Bush Dinner",
-    description:
-      "Romantic candlelit dinner under the African stars with personal chef",
-    price: 250,
-    duration: "Evening",
-  },
-  {
-    id: "photography-guide",
-    name: "Private Photography Guide",
-    description:
-      "Expert wildlife photographer to help capture your perfect shots",
-    price: 350,
-    duration: "Full day",
-  },
-  {
-    id: "night-drive",
-    name: "Night Game Drive",
-    description:
-      "Spot nocturnal wildlife including leopards, hyenas, and aardvarks",
-    price: 95,
-    duration: "3 hours",
-  },
+ {
+ id: "balloon-safari",
+ name: "Hot Air Balloon Safari",
+ description:
+ "Sunrise balloon flight over the Mara followed by a bush breakfast with sparkling wine.",
+ price:450,
+ duration: "4 hours",
+ },
+ {
+ id: "maasai-village",
+ name: "Maasai Cultural Village Visit",
+ description:
+ "Guided visit to a local Maasai community with storytelling, dance, and craft demonstrations.",
+ price:80,
+ duration: "2-3 hours",
+ },
+ {
+ id: "bush-dinner",
+ name: "Private Bush Dinner",
+ description:
+ "Lantern-lit dinner in the wild with a dedicated chef and service team.",
+ price:250,
+ duration: "Evening",
+ },
+ {
+ id: "photography-guide",
+ name: "Private Photography Guide",
+ description:
+ "Travel with a pro wildlife photographer for coaching on composition, light, and camera settings.",
+ price:350,
+ duration: "Full day",
+ },
+ {
+ id: "night-drive",
+ name: "Night Game Drive",
+ description:
+ "Search for nocturnal wildlife like civets, hyenas, genets, and possibly leopard activity.",
+ price:95,
+ duration: "3 hours",
+ },
 ];
 
 export const safariPackages: SafariPackage[] = [
-  {
-    id: "kenya-classic-7",
-    slug: "kenya-classic-safari",
-    name: "Kenya Classic Safari",
-    tagline: "The quintessential East African adventure",
-    duration: 5,
-    description: `Experience the magic of Kenya on this carefully curated journey through the country's most iconic landscapes. From the flamingo-lined shores of Lake Nakuru to the endless golden plains of the Masai Mara, witness the extraordinary diversity of wildlife that makes Kenya the birthplace of the safari.
+ {
+ id: "kenya-classic-7",
+ slug: "kenya-classic-safari",
+ name: "Kenya Classic Safari",
+ tagline: "A well-paced journey through Kenya’s most iconic wilderness",
+ duration:7,
+ description: `Discover Kenya across contrasting landscapes: city-edge wildlife, Rift Valley escarpments, alkaline lakes, and the vast savannas of the Masai Mara.
 
-This journey combines exceptional game viewing with authentic cultural encounters and stays in handpicked lodges that blend seamlessly into their surroundings. Travel in custom 4x4 vehicles with pop-up roofs, accompanied by expert guides who bring the bush to life with their encyclopedic knowledge.
+This itinerary is designed for travelers who want excellent wildlife viewing without rushing. You’ll travel in a custom4x4 safari vehicle with an experienced guide, stay in carefully selected properties, and enjoy a balance of game drives, cultural moments, and downtime.
 
-Adventure by day, comfort by night — this is safari as it should be.`,
-    heroImage: "/ak-forest.webp",
-    galleryImages: [
-      "/ak-guide.webp",
-      "/ak-nile.webp",
-      "/ak-japan.webp",
-      "/ak-morocco.webp",
-    ],
-    startingPrice: 1000,
-    pricePerPerson: 1000,
-    currency: "USD",
-    difficulty: "easy",
-    groupSize: { min: 1, max: 20 },
-    category: "classic",
-    featured: true,
-    bestTime: "July to October (Great Migration)",
-    destinations: [
-      "Kenya",
-      // "Maasai Market",
-      // "Lake Nakuru",
-      // "Masai Mara",
-      // "Mombasa",
-      // "Malindi",
-      // "Diani Beach",
-      // "Lamu Island",
-    ],
-    highlights: [
-      "Witness the Big Five in their natural habitat",
-      "Experience the Great Migration (seasonal)",
-      "Stay in award-winning eco-lodges",
-      "Expert Maasai guides with intimate bush knowledge",
-      "Sunset game drives with sundowner cocktails",
-      "Visit a local Maasai community",
-    ],
-    included: [
-      "All accommodations as per itinerary",
-      "Full board meals at lodges and camps",
-      "Private 4x4 safari vehicle with pop-up roof",
-      "Professional English-speaking guide",
-      "All park entrance and conservancy fees",
-      "Airport transfers and meet & greet",
-      "Bottled water during game drives",
-      "Flying Doctors emergency evacuation cover",
-      "24/7 WhatsApp support throughout your journey",
-    ],
-    excluded: [
-      "International flights",
-      "Travel insurance (required)",
-      "Kenya eVisa ($50)",
-      "Tips and gratuities",
-      "Personal expenses and souvenirs",
-      "Optional activities",
-      "Alcoholic beverages",
-    ],
-    optionalAddOns,
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Nairobi",
-        location: "Nairobi",
-        description: `Your Kenyan adventure begins the moment you land at Jomo Kenyatta International Airport. Our representative will greet you with a warm "Karibu" (welcome) and transfer you to your hotel in the leafy Karen suburb.
+From black rhino sightings in Lake Nakuru to golden-hour drives in the Mara, this is a classic East African safari with comfort, authenticity, and unforgettable scenery.`,
+ heroImage: "/IMG-20250908-WA0018.jpg",
+ galleryImages: [
+ "/IMG-20251013-WA0112(2).jpg",
+ "/IMG-20251013-WA0107.jpg",
+ "/IMG-20251013-WA0060.jpg",
+ "/IMG-20250908-WA0014.jpg",
+ ],
+ startingPrice:2850,
+ pricePerPerson:2850,
+ currency: "USD",
+ difficulty: "easy",
+ groupSize: { min:2, max:7 },
+ category: "classic",
+ featured: true,
+ bestTime: "July to October (migration season), January to March (clear skies)",
+ destinations: ["Kenya", "Nairobi", "Lake Nakuru", "Masai Mara"],
+ highlights: [
+ "Big Five game viewing with professional guides",
+ "Lake Nakuru rhino sanctuary and birdlife",
+ "Multiple Masai Mara game drives in prime wildlife zones",
+ "Scenic Rift Valley viewpoints and photography stops",
+ "Optional Maasai village and balloon safari experience",
+ "Comfortable lodges and tented camps with full-board meals",
+ ],
+ included: [
+ "All accommodations as listed",
+ "Full board on safari (breakfast, lunch, dinner)",
+ "Private4x4 safari vehicle with pop-up roof",
+ "Professional English-speaking safari guide",
+ "Park and conservancy entrance fees",
+ "Airport pickup and drop-off transfers",
+ "Bottled drinking water during drives",
+ "Emergency evacuation cover",
+ "On-trip WhatsApp support",
+ ],
+ excluded: [
+ "International flights",
+ "Travel insurance",
+ "Kenya eTA/eVisa and related fees",
+ "Tips and gratuities",
+ "Personal items and laundry",
+ "Premium/ alcoholic beverages",
+ "Optional activities and add-ons",
+ ],
+ optionalAddOns,
+ itinerary: [
+ {
+ day:1,
+ title: "Arrival in Nairobi",
+ location: "Nairobi",
+ description: `Arrive at Jomo Kenyatta International Airport and meet your safari host for a private transfer to your accommodation.
 
-Named after Karen Blixen of "Out of Africa" fame, this is where Nairobi's colonial history meets modern luxury. Settle into your elegant accommodations and, if time permits, visit the nearby Giraffe Centre or Karen Blixen Museum.
+Depending on arrival time, choose to rest or visit nearby attractions such as the Giraffe Centre. In the evening, meet your guide for a short safari briefing and trip orientation.`,
+ highlights: [
+ "Airport meet-and-greet",
+ "Private transfer to accommodation",
+ "Optional Giraffe Centre visit",
+ "Welcome safari briefing",
+ ],
+ image: "/IMG-20250908-WA0015.jpg",
+ accommodation: {
+ name: "Kilimani Nairobi Airbnb",
+ type: "airbnb",
+ image: "/IMG-20250908-WA0016.jpg",
+ rating:4.7,
+ description:
+ "Comfortable boutique stay in a quiet Nairobi neighborhood with easy airport access.",
+ amenities: ["WiFi", "Garden", "Secure Parking", "Hot Shower"],
+ pricePerNight:60,
+ },
+ meals: ["dinner"],
+ activities: [
+ { name: "Airport Transfer", duration: "45 mins", included: true },
+ { name: "Safari Briefing", duration: "30 mins", included: true },
+ {
+ name: "Giraffe Centre Visit",
+ duration: "2 hours",
+ included: false,
+ price:35,
+ },
+ ],
+ travelInfo: {
+ from: "JKIA Airport",
+ to: "Nairobi",
+ duration: "45 minutes",
+ method: "transfer",
+ },
+ },
+ {
+ day:2,
+ title: "Nairobi to Lake Nakuru",
+ location: "Lake Nakuru",
+ description: `After breakfast, travel through the Great Rift Valley with scenic stops en route.
 
-In the evening, join your guide for a welcome dinner briefing where you'll learn about the adventures ahead.`,
-        highlights: [
-          "Airport meet & greet with flower garland",
-          "Transfer through Nairobi's green suburbs",
-          "Optional: Giraffe Centre visit",
-          "Welcome dinner briefing with your guide",
-        ],
-        image: "/ak-japan.webp",
-        accommodation: {
-          name: "Kilimani Nairobi Airbnb",
-          type: "airbnb",
-          image: "/ak-nile.webp",
-          rating: 5.0,
-          description:
-            "A plantation-style boutique airbnb offering old-world elegance with modern luxury.",
-          amenities: ["Pool", "Spa", "Fine Dining", "Garden", "WiFi"],
-          pricePerNight: 60,
-        },
-        meals: ["dinner"],
-        activities: [
-          { name: "Airport Transfer", duration: "45 mins", included: true },
-          { name: "Welcome Briefing", duration: "30 mins", included: true },
-          {
-            name: "Giraffe Centre Visit",
-            duration: "2 hours",
-            included: false,
-            price: 35,
-          },
-        ],
-        travelInfo: {
-          from: "JKIA Airport",
-          to: "Karen, Nairobi",
-          duration: "45 minutes",
-          method: "transfer",
-        },
-      },
-      {
-        day: 2,
-        title: "Lake Nakuru National Park",
-        location: "Lake Nakuru",
-        description: `After an early breakfast, drive north through the Great Rift Valley. Stop at the escarpment viewpoint where the valley stretches endlessly before you — a landscape so vast it can be seen from space.
+Arrive at Lake Nakuru National Park in time for a game drive focused on rhino, Rothschild’s giraffe, and seasonal flamingo flocks. The compact park offers excellent sightings within short distances.`,
+ highlights: [
+ "Great Rift Valley viewpoint stop",
+ "Arrival game drive in Lake Nakuru",
+ "Rhino sanctuary tracking",
+ "Sunset over the escarpment",
+ ],
+ image: "/IMG-20250908-WA0017.jpg",
+ accommodation: {
+ name: "Sarova Lion Hill Lodge",
+ type: "lodge",
+ image: "/IMG-20250908-WA0018.jpg",
+ rating:4.5,
+ description:
+ "Hillside lodge with panoramic lake views and close park access.",
+ amenities: ["Pool", "Restaurant", "Bar", "Terrace", "WiFi"],
+ pricePerNight:220,
+ },
+ meals: ["breakfast", "lunch", "dinner"],
+ activities: [
+ {
+ name: "Scenic Drive to Lake Nakuru",
+ duration: "4 hours",
+ included: true,
+ },
+ { name: "Afternoon Game Drive", duration: "3 hours", included: true },
+ { name: "Rhino Tracking", duration: "Included", included: true },
+ ],
+ travelInfo: {
+ from: "Nairobi",
+ to: "Lake Nakuru",
+ duration: "4 hours",
+ method: "drive",
+ },
+ },
+ {
+ day:3,
+ title: "Lake Nakuru to Masai Mara",
+ location: "Masai Mara",
+ description: `Depart after breakfast and continue south-west to the Masai Mara ecosystem.
 
-Descend into Lake Nakuru National Park, a soda lake famous for its flamingo populations and exceptional rhino sanctuary. This compact park offers some of the best rhino viewing in Africa, with both black and white rhinos regularly spotted.
+Check in at camp, enjoy lunch, and head out for an evening game drive when predators begin to stir. Expect wide-open plains, dramatic skies, and excellent photographic light.`,
+ highlights: [
+ "Scenic overland transfer",
+ "First Masai Mara game drive",
+ "Golden-hour wildlife viewing",
+ "Campfire evening atmosphere",
+ ],
+ image: "/IMG-20250908-WA0019.jpg",
+ accommodation: {
+ name: "Basecamp Masai Mara",
+ type: "tented-camp",
+ image: "/IMG_20251012_163712_696.jpg",
+ rating:4.7,
+ description:
+ "Eco-conscious tented camp near key wildlife corridors in the Mara.",
+ amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
+ pricePerNight:380,
+ },
+ meals: ["breakfast", "lunch", "dinner"],
+ activities: [
+ {
+ name: "Transfer to Masai Mara",
+ duration: "5-6 hours",
+ included: true,
+ },
+ { name: "Evening Game Drive", duration: "3 hours", included: true },
+ { name: "Sundowner Stop", duration: "1 hour", included: true },
+ ],
+ travelInfo: {
+ from: "Lake Nakuru",
+ to: "Masai Mara",
+ duration: "5-6 hours",
+ method: "drive",
+ },
+ },
+ {
+ day:4,
+ title: "Full Day in Masai Mara",
+ location: "Masai Mara",
+ description: `Spend a full day on safari with flexible morning and afternoon game sessions.
 
-Keep your eyes peeled for the park's famous tree-climbing lions — a rare behavior that makes this population unique.`,
-        highlights: [
-          "Great Rift Valley viewpoint stop",
-          "Flamingo-lined alkaline lake",
-          "Black and white rhino tracking",
-          "Tree-climbing lions",
-          "Afternoon game drive",
-        ],
-        image: "/ak-guide.webp",
-        accommodation: {
-          name: "Sarova Lion Hill Lodge",
-          type: "lodge",
-          image: "/ak-morocco.webp",
-          rating: 4.5,
-          description:
-            "Perched on a hill overlooking Lake Nakuru with panoramic views.",
-          amenities: ["Pool", "Restaurant", "Bar", "Terrace", "WiFi"],
-          pricePerNight: 220,
-        },
-        meals: ["breakfast", "lunch", "dinner"],
-        activities: [
-          {
-            name: "Scenic Drive to Lake Nakuru",
-            duration: "4 hours",
-            included: true,
-          },
-          { name: "Afternoon Game Drive", duration: "3 hours", included: true },
-          { name: "Rhino Tracking", duration: "Included", included: true },
-        ],
-        travelInfo: {
-          from: "Nairobi",
-          to: "Lake Nakuru",
-          duration: "4 hours",
-          method: "drive",
-        },
-      },
-      {
-        day: 3,
-        title: "Journey to Masai Mara",
-        location: "Masai Mara",
-        description: `Today's journey takes you deeper into the wild heart of Kenya. Drive southwest through stunning Rift Valley landscapes, gradually descending onto the vast plains that herald the legendary Masai Mara.
+Your guide will track wildlife activity based on weather, recent sightings, and movement patterns. Break at camp during peak midday heat, then return for evening action near river lines and open plains.`,
+ highlights: [
+ "Predator tracking at first light",
+ "Elephants, giraffes, and antelope herds",
+ "Hippo pools and riverine wildlife",
+ "Optional Maasai village excursion",
+ ],
+ image: "/IMG_20251012_181027_675.jpg",
+ accommodation: {
+ name: "Basecamp Masai Mara",
+ type: "tented-camp",
+ image: "/IMG_20251012_194141_081.jpg",
+ rating:4.7,
+ description:
+ "Comfortable eco-camp with excellent access to game-viewing zones.",
+ amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
+ pricePerNight:380,
+ },
+ meals: ["breakfast", "lunch", "dinner"],
+ activities: [
+ {
+ name: "Morning Game Drive",
+ duration: "4 hours",
+ included: true,
+ },
+ { name: "Afternoon Game Drive", duration: "4 hours", included: true },
+ {
+ name: "Maasai Village Visit",
+ duration: "2 hours",
+ included: false,
+ price:80,
+ },
+ ],
+ },
+ {
+ day:5,
+ title: "Mara River Exploration",
+ location: "Masai Mara",
+ description: `Focus on the Mara River region, known for dramatic crossings in migration months and year-round predator activity.
 
-Named after the Maasai people and the Mara River, this is one of Africa's greatest wildlife reserves. Arrive at your luxury tented camp in time for an evening game drive as the savanna glows golden in the setting sun.
+Look for crocodiles, hippos, and big cats along the river edges while enjoying a picnic-style lunch in the bush.`,
+ highlights: [
+ "Mara River safari circuit",
+ "Hippo and crocodile sightings",
+ "Seasonal wildebeest crossing zones",
+ "Bush picnic lunch",
+ ],
+ image: "/IMG_20251012_195805_544.jpg",
+ accommodation: {
+ name: "Basecamp Masai Mara",
+ type: "tented-camp",
+ image: "/IMG_20251013_070710_147.jpg",
+ rating:4.7,
+ description:
+ "Riverside tented accommodation with strong sustainability focus.",
+ amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
+ pricePerNight:380,
+ },
+ meals: ["breakfast", "lunch", "dinner"],
+ activities: [
+ {
+ name: "Full-Day Mara River Safari",
+ duration: "8 hours",
+ included: true,
+ },
+ { name: "Bush Picnic Lunch", duration: "1 hour", included: true },
+ {
+ name: "Hot Air Balloon Safari",
+ duration: "4 hours",
+ included: false,
+ price:450,
+ },
+ ],
+ },
+ {
+ day:6,
+ title: "Masai Mara to Nairobi",
+ location: "Nairobi",
+ description: `Enjoy one final morning game drive, then depart after breakfast for Nairobi.
 
-Tonight, fall asleep to the sounds of the African bush — lions roaring, hyenas calling, and the rustle of wildlife passing through camp.`,
-        highlights: [
-          "Scenic drive through Rift Valley",
-          "First glimpse of the endless Mara plains",
-          "Evening game drive at golden hour",
-          "Sundowner drinks in the bush",
-          "Night sounds of the African wilderness",
-        ],
-        image: "/ak-forest.webp",
-        accommodation: {
-          name: "Basecamp Masai Mara",
-          type: "tented-camp",
-          image: "/ak-nile.webp",
-          rating: 4.7,
-          description:
-            "Eco-friendly tented camp on the banks of the Talek River.",
-          amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
-          pricePerNight: 380,
-        },
-        meals: ["breakfast", "lunch", "dinner"],
-        activities: [
-          {
-            name: "Scenic Transfer to Mara",
-            duration: "5-6 hours",
-            included: true,
-          },
-          { name: "Evening Game Drive", duration: "3 hours", included: true },
-          { name: "Bush Sundowner", duration: "1 hour", included: true },
-        ],
-        travelInfo: {
-          from: "Lake Nakuru",
-          to: "Masai Mara",
-          duration: "5-6 hours",
-          method: "drive",
-        },
-      },
-      {
-        day: 4,
-        title: "Full Day Masai Mara Safari",
-        location: "Masai Mara",
-        description: `A full day to explore the legendary Masai Mara. Set out early when predators are most active, following your guide's expert tracking to find lions, cheetahs, and leopards. The Mara is home to one of the highest concentrations of big cats in Africa.
+Arrive in the afternoon and relax before a farewell dinner to celebrate your safari highlights.`,
+ highlights: [
+ "Final sunrise game drive",
+ "Scenic return to Nairobi",
+ "Optional shopping stop",
+ "Farewell dinner",
+ ],
+ image: "/IMG_20251013_091542_287.jpg",
+ accommodation: {
+ name: "Kilimani Nairobi Airbnb",
+ type: "hotel",
+ image: "/IMG_20251013_102105_013.jpg",
+ rating:4.4,
+ description:
+ "Convenient Nairobi stay for your final night before departure.",
+ amenities: ["Pool", "Restaurant", "WiFi", "Secure Parking"],
+ pricePerNight:60,
+ },
+ meals: ["breakfast", "lunch", "dinner"],
+ activities: [
+ { name: "Morning Game Drive", duration: "3 hours", included: true },
+ { name: "Drive to Nairobi", duration: "5-6 hours", included: true },
+ { name: "Farewell Dinner", duration: "2 hours", included: true },
+ ],
+ travelInfo: {
+ from: "Masai Mara",
+ to: "Nairobi",
+ duration: "5-6 hours",
+ method: "drive",
+ },
+ },
+ {
+ day:7,
+ title: "Departure",
+ location: "Nairobi",
+ description: `After breakfast, transfer to Jomo Kenyatta International Airport for your onward flight.
 
-Return to camp for lunch and relaxation during the heat of the day. The afternoon drive reveals different characters — elephants at waterholes, hippos in the Mara River, and perhaps the elusive leopard draped across an acacia branch.
-
-As the sun sets, find a perfect spot for sundowners overlooking the vast plains.`,
-        highlights: [
-          "Early morning Big Cat tracking",
-          "Hippo pools and crocodile sightings",
-          "Elephant herds crossing the plains",
-          "Optional Maasai village visit",
-          "Spectacular African sunset",
-        ],
-        image: "/ak-guide.webp",
-        accommodation: {
-          name: "Basecamp Masai Mara",
-          type: "tented-camp",
-          image: "/ak-nile.webp",
-          rating: 4.7,
-          description:
-            "Eco-friendly tented camp on the banks of the Talek River.",
-          amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
-          pricePerNight: 380,
-        },
-        meals: ["breakfast", "lunch", "dinner"],
-        activities: [
-          {
-            name: "Early Morning Game Drive",
-            duration: "4 hours",
-            included: true,
-          },
-          { name: "Afternoon Game Drive", duration: "4 hours", included: true },
-          {
-            name: "Maasai Village Visit",
-            duration: "2 hours",
-            included: false,
-            price: 80,
-          },
-        ],
-      },
-      {
-        day: 5,
-        title: "Mara River & Migration",
-        location: "Masai Mara",
-        description: `Today focuses on the famous Mara River — lifeline of this ecosystem and stage for one of nature's greatest spectacles. During migration season (July-October), millions of wildebeest cross these crocodile-infested waters.
-
-Even outside migration, the riverine forest teems with wildlife. Look for leopards lounging in fig trees, monitor lizards, and colorful kingfishers. The river itself hosts massive Nile crocodiles and pods of territorial hippos.
-
-Enjoy a picnic lunch in the bush, surrounded by the sights and sounds of wild Africa.`,
-        highlights: [
-          "Mara River exploration",
-          "Hippo and crocodile watching",
-          "River crossing (seasonal)",
-          "Riverine forest wildlife",
-          "Picnic lunch in the bush",
-        ],
-        image: "/ak-nile.webp",
-        accommodation: {
-          name: "Basecamp Masai Mara",
-          type: "tented-camp",
-          image: "/ak-nile.webp",
-          rating: 4.7,
-          description:
-            "Eco-friendly tented camp on the banks of the Talek River.",
-          amenities: ["En-suite Tent", "Bush Dining", "Campfire", "River View"],
-          pricePerNight: 380,
-        },
-        meals: ["breakfast", "lunch", "dinner"],
-        activities: [
-          {
-            name: "Full Day Mara River Safari",
-            duration: "8 hours",
-            included: true,
-          },
-          { name: "Bush Picnic Lunch", duration: "1 hour", included: true },
-          {
-            name: "Hot Air Balloon Safari",
-            duration: "4 hours",
-            included: false,
-            price: 450,
-          },
-        ],
-      },
-      {
-        day: 6,
-        title: "Mara to Nairobi",
-        location: "Nairobi",
-        description: `Enjoy a final early morning game drive — your last chance to spot any animals that have eluded you. The early light is magical, painting the savanna in shades of gold and pink.
-
-After breakfast, bid farewell to the Mara and begin the scenic drive back to Nairobi. Arrive in the late afternoon with time to freshen up before a farewell dinner.
-
-Over dinner, share stories and photos with your guide, reflecting on an incredible week in the African bush.`,
-        highlights: [
-          "Final sunrise game drive",
-          "Scenic return journey",
-          "Optional city tour or shopping",
-          "Farewell dinner celebration",
-        ],
-        image: "/ak-morocco.webp",
-        accommodation: {
-          name: "Kilimani Nairobi Airbnb",
-          type: "hotel",
-          image: "/ak-japan.webp",
-          rating: 4.4,
-          description: "The only hotel overlooking Nairobi National Park.",
-          amenities: ["Pool", "Spa", "Restaurant", "Park Views", "WiFi"],
-          pricePerNight: 60,
-        },
-        meals: ["breakfast", "lunch", "dinner"],
-        activities: [
-          { name: "Morning Game Drive", duration: "3 hours", included: true },
-          { name: "Return to Nairobi", duration: "5-6 hours", included: true },
-          { name: "Farewell Dinner", duration: "2 hours", included: true },
-        ],
-        travelInfo: {
-          from: "Masai Mara",
-          to: "Nairobi",
-          duration: "5-6 hours",
-          method: "drive",
-        },
-      },
-      {
-        day: 7,
-        title: "Departure",
-        location: "Nairobi",
-        description: `Your Kenyan adventure concludes today. Depending on your flight time, enjoy a leisurely breakfast overlooking wildlife in Nairobi National Park — a surreal sight with the city skyline in the background.
-
-Our driver will transfer you to Jomo Kenyatta International Airport in plenty of time for your departure.
-
-Kwaheri — until your next African adventure!`,
-        highlights: [
-          "Leisurely breakfast with park views",
-          "Optional shopping at Kazuri Beads",
-          "Airport transfer",
-        ],
-        image: "/ak-guide.webp",
-        accommodation: {
-          name: "Day Room Available",
-          type: "hotel",
-          image: "/ak-japan.webp",
-          rating: 4.4,
-          description:
-            "Day room available for freshening up before your flight.",
-          amenities: ["Day Room", "Pool Access"],
-          pricePerNight: 0,
-        },
-        meals: ["breakfast"],
-        activities: [
-          { name: "Airport Transfer", duration: "45 mins", included: true },
-        ],
-        travelInfo: {
-          from: "Nairobi Hotel",
-          to: "JKIA Airport",
-          duration: "45 minutes",
-          method: "transfer",
-        },
-      },
-    ],
-  },
+If your schedule allows, optional short activities or shopping can be arranged before airport drop-off.`,
+ highlights: [
+ "Leisurely breakfast",
+ "Optional last-minute shopping",
+ "Private airport transfer",
+ ],
+ image: "/IMG-20250908-WA0010.jpg",
+ accommodation: {
+ name: "Day Room Available",
+ type: "hotel",
+ image: "/IMG-20250908-WA0011.jpg",
+ rating:4.3,
+ description:
+ "Optional day-use room to freshen up before international departure.",
+ amenities: ["Day Room", "Pool Access", "Lounge Access"],
+ pricePerNight:0,
+ },
+ meals: ["breakfast"],
+ activities: [
+ { name: "Airport Transfer", duration: "45 mins", included: true },
+ ],
+ travelInfo: {
+ from: "Nairobi",
+ to: "JKIA Airport",
+ duration: "45 minutes",
+ method: "transfer",
+ },
+ },
+ ],
+ },
 ];
 
 export function getPackageBySlug(slug: string): SafariPackage | undefined {
-  return safariPackages.find((p) => p.slug === slug);
+ return safariPackages.find((pkg) => pkg.slug === slug);
 }

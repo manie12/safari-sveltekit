@@ -190,8 +190,9 @@
   .day-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: height var(--transition-base);
+    background: #f8f8f8;
   }
 
   .day-badge {
@@ -443,8 +444,9 @@
   .accommodation-image {
     width: 100%;
     height: 140px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 4px;
+    background: #f8f8f8;
   }
 
   .accommodation-header {
@@ -524,6 +526,7 @@
 
     .accommodation-image {
       height: 180px;
+      object-fit: contain;
     }
   }
 </style>

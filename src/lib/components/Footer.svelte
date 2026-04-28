@@ -14,6 +14,7 @@
     <div class="footer-grid">
       <!-- Brand Column -->
       <div class="footer-brand">
+        <img src="/IMG-20250908-WA0010.jpg" alt="ASIS Safaris Logo" class="footer-logo-img" />
         <h3 class="footer-logo">ASIS Safaris</h3>
         <p class="footer-description">
           Your local friend in Kenya. Authentic safari experiences with transparent 
@@ -105,6 +106,16 @@
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 16px;
+  }
+
+  .footer-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: #fff2;
   }
 
   .footer-description {

@@ -328,7 +328,7 @@
     <!-- Quick WhatsApp -->
     <div class="panel-footer">
       <a 
-        href="https://wa.me/254700000000?text={encodeURIComponent(`Hi! I'm interested in the ${safariPackage.name} for ${totalTravelers} travelers.`)}"
+        href="https://wa.me/254703121351?text={encodeURIComponent(`Hi! I'm interested in the ${safariPackage.name} for ${totalTravelers} travelers.`)}"
         target="_blank"
         rel="noopener noreferrer"
         class="btn whatsapp-btn"
