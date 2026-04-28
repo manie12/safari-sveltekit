@@ -277,12 +277,12 @@
 
           <div class="form-group">
             <label for="phone" class="label">Phone / WhatsApp</label>
-            <input type="tel" id="phone" class="input" placeholder="+1 555 123 4567" bind:value={phone} />
+            <input type="tel" id="phone" class="input" placeholder="+1 712345678" bind:value={phone} />
           </div>
 
           <div class="form-group">
             <label for="email" class="label">Email</label>
-            <input type="email" id="email" class="input" placeholder="john@example.com" bind:value={email} />
+            <input type="email" id="email" class="input" placeholder="asissafaris@gmail.com" bind:value={email} />
           </div>
 
           <div class="form-group">
@@ -328,7 +328,7 @@
     <!-- Quick WhatsApp -->
     <div class="panel-footer">
       <a 
-        href="https://wa.me/254703121351?text={encodeURIComponent(`Hi! I'm interested in the ${safariPackage.name} for ${totalTravelers} travelers.`)}"
+        href="https://wa.me/25414223041?text={encodeURIComponent(`Hi! I'm interested in booking with asis safaris  for ${totalTravelers} travelers.`)}"
         target="_blank"
         rel="noopener noreferrer"
         class="btn whatsapp-btn"
