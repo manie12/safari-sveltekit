@@ -8,20 +8,23 @@
   <div class="container header-inner">
     <!-- Logo -->
     <a href="/" class="logo">
-      Asis <span>Safaris</span>
+      <span class="logo-main">Asis <span>Safaris</span></span>
+      <span class="logo-sub">Kenya · Est. 2018</span>
     </a>
 
     <!-- Desktop Navigation -->
     <nav class="nav-desktop">
       <a href="/safaris">Safari Packages</a>
       <a href="/about">About Us</a>
+      <a href="/about#why-us">Why Us</a>
+      <a href="/about#contact">Contact</a>
     </nav>
 
     <!-- Desktop CTA -->
     <div class="header-actions">
-      <a href="tel:+254700000000" class="btn btn-ghost">
+      <a href="tel:+254714223041" class="btn btn-ghost">
         <Phone size={16} />
-        +254 703121351
+        +254 714223041
       </a>
       <a 
         href="https://wa.me/254703121351" 
@@ -52,12 +55,12 @@
         <a href="/about" on:click={() => mobileMenuOpen = false}>About Us</a>
       </nav>
       <div class="mobile-actions">
-        <a href="tel:+254703121351" class="btn btn-outline" style="width: 100%;">
+        <a href="tel:+254714223041" class="btn btn-outline" style="width: 100%;">
           <Phone size={20} />
           Call Us
         </a>
         <a 
-          href="https://wa.me/254703121351" 
+          href="https://wa.me/254714223041" 
           target="_blank" 
           rel="noopener noreferrer"
           class="btn btn-primary"
@@ -92,15 +95,30 @@
 
   .logo {
     font-family: var(--font-primary);
-    font-size: 28px;
-    font-weight: 400;
     color: var(--color-primary-dark);
-    letter-spacing: -0.02em;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
   }
 
-  .logo span {
+  .logo-main {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .logo-main span {
     font-weight: 500;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ak-light-grey1);
+    font-family: var(--font-secondary);
+    margin-top: 2px;
   }
 
   .nav-desktop {

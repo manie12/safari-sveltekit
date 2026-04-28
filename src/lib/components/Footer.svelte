@@ -22,9 +22,9 @@
         </p>
 
         <div class="footer-contact">
-          <a href="tel:+254700000000">
+          <a href="tel:+254714223041">
             <Phone size={16} />
-            +254 700 000 000
+            +254 714223041
           </a>
           <a href="mailto:hello@asissafaris.com">
             <Mail size={16} />

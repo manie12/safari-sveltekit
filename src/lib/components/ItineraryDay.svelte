@@ -22,7 +22,6 @@
   <button class="day-header" on:click={onToggle}>
     <div class="day-image-container">
       <img src={day.image} alt={day.title} class="day-image" />
-      <span class="day-badge">Day {day.day}</span>
     </div>
 
     <div class="day-summary">
