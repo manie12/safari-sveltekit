@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Phone, MessageCircle, Menu, X } from 'lucide-svelte';
-  
+  import { Phone, MessageCircle, Mail, Menu, X } from 'lucide-svelte';
+
   let mobileMenuOpen = false;
 </script>
 
@@ -26,7 +26,11 @@
         <Phone size={16} />
         +254 714223041
       </a>
-      <a 
+      <a href="/?method=email#booking-panel" class="btn btn-ghost">
+        <Mail size={16} />
+        Email Us
+      </a>
+      <a
         href="https://wa.me/254714223041"
         target="_blank"
         rel="noopener noreferrer"
@@ -59,7 +63,11 @@
           <Phone size={20} />
           Call Us
         </a>
-        <a 
+        <a href="/?method=email#booking-panel" class="btn btn-outline" style="width: 100%;">
+          <Mail size={20} />
+          Email Inquiry
+        </a>
+        <a
           href="https://wa.me/254714223041" 
           target="_blank" 
           rel="noopener noreferrer"

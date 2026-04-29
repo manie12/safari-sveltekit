@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
   import { 
     Calendar, Phone, MessageCircle, Mail, ChevronDown, Check, 
@@ -79,9 +80,18 @@
     email = '';
     message = '';
   }
+
+  onMount(() => {
+    const params = new URLSearchParams(window.location.search);
+    const method = params.get('method');
+    if (method === 'email' || method === 'whatsapp' || method === 'call') {
+      contactMethod = method;
+      showContactForm = true;
+    }
+  });
 </script>
 
-<aside class="booking-panel">
+<aside class="booking-panel" id="booking-panel">
   {#if isSubmitted}
     <!-- Success State -->
     <div class="success-state" transition:slide>

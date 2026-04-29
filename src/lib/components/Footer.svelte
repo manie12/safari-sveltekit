@@ -26,7 +26,7 @@
             <Phone size={16} />
             +254 714223041
           </a>
-          <a href="mailto:bookings@mail.asissafaris.com">
+          <a href="/?method=email#booking-panel">
             <Mail size={16} />
             bookings@mail.asissafaris.com
           </a>

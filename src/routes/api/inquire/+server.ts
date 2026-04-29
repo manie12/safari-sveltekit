@@ -1,13 +1,12 @@
 import { json } from '@sveltejs/kit';
 import { Resend } from 'resend';
-import { RESEND_API_KEY, TEAM_EMAIL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import type { RequestHandler } from './$types';
 
-const resend = new Resend(RESEND_API_KEY);
-
 export const POST: RequestHandler = async ({ request }) => {
+  const resend = new Resend(env.RESEND_API_KEY);
   const { name, email, phone, message, contactMethod, date, adults, children, safari } =
-    await request.json();
+      await request.json();
 
   if (!name?.trim() || (!email?.trim() && !phone?.trim())) {
     return json({ error: 'Name and at least one contact method are required.' }, { status: 400 });
@@ -49,7 +48,7 @@ export const POST: RequestHandler = async ({ request }) => {
     // 2. Internal notification to the team
     await resend.emails.send({
       from: 'Bookings Bot <bookings@mail.asissafaris.com>',
-      to: [TEAM_EMAIL],
+      to: [env.TEAM_EMAIL],
       replyTo: email ? email : undefined,
       subject: `New Safari Inquiry — ${name}`,
       html: `

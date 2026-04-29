@@ -169,7 +169,7 @@
               <span class="method-value">+254 714 223 041</span>
             </div>
           </a>
-          <a href="mailto:bookings@mail.asissafaris.com" class="contact-method">
+          <a href="/?method=email#booking-panel" class="contact-method">
             <Mail size={20} />
             <div>
               <span class="method-label">Email</span>
@@ -197,6 +197,10 @@
         >
           <MessageCircle size={18} />
           Start Planning on WhatsApp
+        </a>
+        <a href="/?method=email#booking-panel" class="btn btn-outline contact-btn">
+          <Mail size={18} />
+          Email Inquiry
         </a>
         <a href="tel:+254714223041" class="btn btn-outline contact-btn">
           <Phone size={18} />

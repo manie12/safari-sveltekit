@@ -17,6 +17,7 @@
     Award,
     Clock,
     Phone,
+    Mail,
   } from "lucide-svelte";
   import ItineraryDay from "$lib/components/ItineraryDay.svelte";
   import BookingPanel from "$lib/components/BookingPanel.svelte";
@@ -160,6 +161,10 @@
         >
           <MessageCircle size={18} />
           Plan My Safari
+        </a>
+        <a href="/?method=email#booking-panel" class="btn btn-glass">
+          <Mail size={18} />
+          Email Inquiry
         </a>
         <a href="tel:+254714223041" class="btn btn-glass">
           <Phone size={18} />
@@ -437,6 +442,13 @@
     >
       <MessageCircle size={18} />
       Plan My Safari
+    </a>
+    <a
+      href="/?method=email#booking-panel"
+      class="btn btn-outline mobile-cta-btn"
+    >
+      <Mail size={18} />
+      Email Us
     </a>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MessageCircle, Calendar, Users, MapPin, Check } from "lucide-svelte";
+  import { MessageCircle, Mail, Calendar, Users, MapPin, Check } from "lucide-svelte";
   import { safariPackages } from "$lib/data/safaris";
 </script>
 
@@ -61,13 +61,20 @@
               <div class="card-actions">
                 <a href="/" class="btn btn-outline">View Details</a>
                 <a
+                  href="/?method=email#booking-panel"
+                  class="btn btn-ghost"
+                >
+                  <Mail size={16} />
+                  Email
+                </a>
+                <a
                   href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20{encodeURIComponent(pkg.name)}"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-primary"
                 >
                   <MessageCircle size={16} />
-                  Enquire
+                  WhatsApp
                 </a>
               </div>
             </div>
@@ -82,15 +89,24 @@
         <h3>Don't see what you're looking for?</h3>
         <p>We build fully custom itineraries around your dates, budget, and interests. Tell us what you have in mind.</p>
       </div>
-      <a
-        href="https://wa.me/254714223041?text=Hi%2C%20I'd%20like%20a%20custom%20safari%20itinerary"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-primary"
-      >
-        <MessageCircle size={18} />
-        Build a Custom Safari
-      </a>
+      <div class="custom-cta-actions">
+        <a
+          href="/?method=email#booking-panel"
+          class="btn btn-outline-light"
+        >
+          <Mail size={18} />
+          Email Inquiry
+        </a>
+        <a
+          href="https://wa.me/254714223041?text=Hi%2C%20I'd%20like%20a%20custom%20safari%20itinerary"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          <MessageCircle size={18} />
+          Build a Custom Safari
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -318,6 +334,33 @@
     white-space: nowrap;
     text-decoration: none;
     flex-shrink: 0;
+  }
+
+  .custom-cta-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .btn-outline-light:hover {
+    background: rgba(255,255,255,0.1);
   }
 
   @media (max-width: 640px) {
