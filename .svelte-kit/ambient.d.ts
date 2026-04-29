@@ -26,6 +26,8 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const RESEND_API_KEY: string;
+	export const TEAM_EMAIL: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -33,38 +35,34 @@ declare module '$env/static/private' {
 	export const SHELL: string;
 	export const HOMEBREW_REPOSITORY: string;
 	export const TMPDIR: string;
-	export const npm_config_global_prefix: string;
 	export const VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const FPATH: string;
 	export const ZDOTDIR: string;
 	export const MallocNanoZone: string;
-	export const COLOR: string;
-	export const npm_config_noproxy: string;
-	export const npm_config_local_prefix: string;
+	export const npm_config_registry: string;
 	export const USER: string;
 	export const COMMAND_MODE: string;
-	export const npm_config_globalconfig: string;
+	export const PNPM_SCRIPT_SRC_DIR: string;
 	export const CLAUDE_CODE_SSE_PORT: string;
 	export const SSH_AUTH_SOCK: string;
 	export const VSCODE_PROFILE_INITIALIZED: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
+	export const npm_config_verify_deps_before_run: string;
+	export const npm_config_frozen_lockfile: string;
 	export const PATH: string;
 	export const npm_package_json: string;
 	export const _: string;
 	export const LaunchInstanceID: string;
-	export const npm_config_userconfig: string;
-	export const npm_config_init_module: string;
 	export const USER_ZDOTDIR: string;
 	export const __CFBundleIdentifier: string;
 	export const npm_command: string;
 	export const PWD: string;
 	export const npm_lifecycle_event: string;
-	export const EDITOR: string;
+	export const npm_config__jsr_registry: string;
 	export const npm_package_name: string;
 	export const LANG: string;
-	export const npm_config_npm_version: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const XPC_FLAGS: string;
 	export const npm_config_node_gyp: string;
@@ -75,7 +73,6 @@ declare module '$env/static/private' {
 	export const HOME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const HOMEBREW_PREFIX: string;
-	export const npm_config_cache: string;
 	export const LOGNAME: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
@@ -118,6 +115,8 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		RESEND_API_KEY: string;
+		TEAM_EMAIL: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -125,38 +124,34 @@ declare module '$env/dynamic/private' {
 		SHELL: string;
 		HOMEBREW_REPOSITORY: string;
 		TMPDIR: string;
-		npm_config_global_prefix: string;
 		VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 		TERM_PROGRAM_VERSION: string;
 		FPATH: string;
 		ZDOTDIR: string;
 		MallocNanoZone: string;
-		COLOR: string;
-		npm_config_noproxy: string;
-		npm_config_local_prefix: string;
+		npm_config_registry: string;
 		USER: string;
 		COMMAND_MODE: string;
-		npm_config_globalconfig: string;
+		PNPM_SCRIPT_SRC_DIR: string;
 		CLAUDE_CODE_SSE_PORT: string;
 		SSH_AUTH_SOCK: string;
 		VSCODE_PROFILE_INITIALIZED: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
+		npm_config_verify_deps_before_run: string;
+		npm_config_frozen_lockfile: string;
 		PATH: string;
 		npm_package_json: string;
 		_: string;
 		LaunchInstanceID: string;
-		npm_config_userconfig: string;
-		npm_config_init_module: string;
 		USER_ZDOTDIR: string;
 		__CFBundleIdentifier: string;
 		npm_command: string;
 		PWD: string;
 		npm_lifecycle_event: string;
-		EDITOR: string;
+		npm_config__jsr_registry: string;
 		npm_package_name: string;
 		LANG: string;
-		npm_config_npm_version: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		XPC_FLAGS: string;
 		npm_config_node_gyp: string;
@@ -167,7 +162,6 @@ declare module '$env/dynamic/private' {
 		HOME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		HOMEBREW_PREFIX: string;
-		npm_config_cache: string;
 		LOGNAME: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;

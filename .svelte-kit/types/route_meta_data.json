@@ -1,5 +1,8 @@
 {
 	"/": [],
 	"/about": [],
+	"/api/inquire": [
+		"src/routes/api/inquire/+server.ts"
+	],
 	"/safaris": []
 }
