@@ -1,6 +1,6 @@
 import { json } from '@sveltejs/kit';
 import { Resend } from 'resend';
-import { RESEND_API_KEY } from '$env/static/private';
+import { RESEND_API_KEY, TEAM_EMAIL } from '$env/static/private';
 import type { RequestHandler } from './$types';
 
 const resend = new Resend(RESEND_API_KEY);
@@ -49,7 +49,7 @@ export const POST: RequestHandler = async ({ request }) => {
     // 2. Internal notification to the team
     await resend.emails.send({
       from: 'Bookings Bot <bookings@mail.asissafaris.com>',
-      to: ['bookings@mail.asissafaris.com'],
+      to: [TEAM_EMAIL],
       replyTo: email ? email : undefined,
       subject: `New Safari Inquiry — ${name}`,
       html: `
