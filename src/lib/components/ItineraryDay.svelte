@@ -194,18 +194,6 @@
     background: #f8f8f8;
   }
 
-  .day-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: var(--color-burnt-sienna);
-    color: white;
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-  }
 
   .day-summary {
     padding: 24px;

@@ -127,7 +127,7 @@
 
       <!-- Travelers -->
       <div class="form-group">
-        <label class="label">Travelers</label>
+        <div class="label">Travelers</div>
         <div class="travelers-box">
           <div class="traveler-row">
             <div class="traveler-info">
