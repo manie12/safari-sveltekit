@@ -27,8 +27,8 @@
         +254 714223041
       </a>
       <a 
-        href="https://wa.me/254703121351" 
-        target="_blank" 
+        href="https://wa.me/254714223041"
+        target="_blank"
         rel="noopener noreferrer"
         class="btn btn-primary"
       >

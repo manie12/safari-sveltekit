@@ -155,7 +155,7 @@
         <p>Most enquiries receive a response within 30 minutes during business hours (EAT, GMT+3).</p>
 
         <div class="contact-methods">
-          <a href="https://wa.me/254703121351" target="_blank" rel="noopener noreferrer" class="contact-method">
+          <a href="https://wa.me/254714223041" target="_blank" rel="noopener noreferrer" class="contact-method">
             <MessageCircle size={20} />
             <div>
               <span class="method-label">WhatsApp (Fastest)</span>
@@ -169,11 +169,11 @@
               <span class="method-value">+254 714 223 041</span>
             </div>
           </a>
-          <a href="mailto:hello@asissafaris.com" class="contact-method">
+          <a href="mailto:bookings@mail.asissafaris.com" class="contact-method">
             <Mail size={20} />
             <div>
               <span class="method-label">Email</span>
-              <span class="method-value">hello@asissafaris.com</span>
+              <span class="method-value">bookings@mail.asissafaris.com</span>
             </div>
           </a>
           <div class="contact-method">

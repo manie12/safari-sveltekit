@@ -23,6 +23,7 @@
   let message = '';
   let isSubmitting = false;
   let isSubmitted = false;
+  let submitError = '';
 
   $: totalTravelers = adults + children;
   
@@ -44,9 +45,31 @@
 
   async function handleSubmit() {
     isSubmitting = true;
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    isSubmitting = false;
-    isSubmitted = true;
+    submitError = '';
+    try {
+      const res = await fetch('/api/inquire', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          message,
+          contactMethod,
+          date: selectedDate,
+          adults,
+          children,
+          safari: safariPackage.name,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Something went wrong');
+      isSubmitted = true;
+    } catch (err: any) {
+      submitError = err.message || 'Failed to send. Please try WhatsApp or call us.';
+    } finally {
+      isSubmitting = false;
+    }
   }
 
   function resetForm() {
@@ -282,7 +305,7 @@
 
           <div class="form-group">
             <label for="email" class="label">Email</label>
-            <input type="email" id="email" class="input" placeholder="asissafaris@gmail.com" bind:value={email} />
+            <input type="email" id="email" class="input" placeholder="you@example.com" bind:value={email} />
           </div>
 
           <div class="form-group">
@@ -309,6 +332,9 @@
             {/if}
             {isSubmitting ? 'Sending...' : 'Get Response in <30 min'}
           </button>
+          {#if submitError}
+            <p class="submit-error">{submitError}</p>
+          {/if}
         </div>
       {/if}
 
@@ -328,7 +354,7 @@
     <!-- Quick WhatsApp -->
     <div class="panel-footer">
       <a 
-        href="https://wa.me/25414223041?text={encodeURIComponent(`Hi! I'm interested in booking with asis safaris  for ${totalTravelers} travelers.`)}"
+        href="https://wa.me/254714223041?text={encodeURIComponent(`Hi! I'm interested in booking with asis safaris  for ${totalTravelers} travelers.`)}"
         target="_blank"
         rel="noopener noreferrer"
         class="btn whatsapp-btn"
@@ -709,6 +735,13 @@
   .btn-submit:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  .submit-error {
+    color: #c0392b;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
   }
 
   /* Trust Badges */

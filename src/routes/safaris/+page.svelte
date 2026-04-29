@@ -61,7 +61,7 @@
               <div class="card-actions">
                 <a href="/" class="btn btn-outline">View Details</a>
                 <a
-                  href="https://wa.me/254703121351?text=Hi%2C%20I'm%20interested%20in%20{encodeURIComponent(pkg.name)}"
+                  href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20{encodeURIComponent(pkg.name)}"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="btn btn-primary"
@@ -83,7 +83,7 @@
         <p>We build fully custom itineraries around your dates, budget, and interests. Tell us what you have in mind.</p>
       </div>
       <a
-        href="https://wa.me/254703121351?text=Hi%2C%20I'd%20like%20a%20custom%20safari%20itinerary"
+        href="https://wa.me/254714223041?text=Hi%2C%20I'd%20like%20a%20custom%20safari%20itinerary"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-primary"

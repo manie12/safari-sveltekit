@@ -153,7 +153,7 @@
 
       <div class="hero-ctas">
         <a
-          href="https://wa.me/254703121351?text=Hi%2C%20I'm%20interested%20in%20the%20Kenya%20Classic%20Safari"
+          href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20the%20Kenya%20Classic%20Safari"
           target="_blank"
           rel="noopener noreferrer"
           class="btn btn-primary hero-cta-btn"
