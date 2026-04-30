@@ -22,7 +22,7 @@
 
     <!-- Desktop CTA -->
     <div class="header-actions">
-      <a href="tel:+254714223041" class="btn btn-ghost">
+      <a href="/?method=call#booking-panel" class="btn btn-ghost">
         <Phone size={16} />
         +254 714223041
       </a>
@@ -30,12 +30,7 @@
         <Mail size={16} />
         Email Us
       </a>
-      <a
-        href="https://wa.me/254714223041"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-primary"
-      >
+      <a href="/?method=whatsapp#booking-panel" class="btn btn-primary">
         <MessageCircle size={18} />
         WhatsApp Us
       </a>
@@ -59,7 +54,7 @@
         <a href="/about" on:click={() => mobileMenuOpen = false}>About Us</a>
       </nav>
       <div class="mobile-actions">
-        <a href="tel:+254714223041" class="btn btn-outline" style="width: 100%;">
+        <a href="/?method=call#booking-panel" class="btn btn-outline" style="width: 100%;">
           <Phone size={20} />
           Call Us
         </a>
@@ -67,13 +62,7 @@
           <Mail size={20} />
           Email Inquiry
         </a>
-        <a
-          href="https://wa.me/254714223041" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-          style="width: 100%;"
-        >
+        <a href="/?method=whatsapp#booking-panel" class="btn btn-primary" style="width: 100%;">
           <MessageCircle size={20} />
           WhatsApp Us
         </a>

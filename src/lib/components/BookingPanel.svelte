@@ -44,6 +44,15 @@
 
   $: isFormValid = name.trim() && (phone.trim() || email.trim());
 
+  function buildWhatsAppMessage() {
+    let msg = `Hi! I'm interested in the ${safariPackage.name}.\n`;
+    msg += `Name: ${name}\n`;
+    msg += `Travelers: ${adults} adult(s)${children > 0 ? `, ${children} child(ren)` : ''}\n`;
+    if (selectedDate) msg += `Travel date: ${selectedDate}\n`;
+    if (message) msg += `Message: ${message}\n`;
+    return encodeURIComponent(msg);
+  }
+
   async function handleSubmit() {
     isSubmitting = true;
     submitError = '';
@@ -66,11 +75,26 @@
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Something went wrong');
       isSubmitted = true;
+
+      // Always send email — then also open WhatsApp or phone dialer
+      if (contactMethod === 'whatsapp') {
+        window.open(`https://wa.me/254714223041?text=${buildWhatsAppMessage()}`, '_blank', 'noopener,noreferrer');
+      } else if (contactMethod === 'call') {
+        window.location.href = 'tel:+254714223041';
+      }
     } catch (err: any) {
-      submitError = err.message || 'Failed to send. Please try WhatsApp or call us.';
+      submitError = err.message || 'Failed to send. Please try WhatsApp or call us directly.';
     } finally {
       isSubmitting = false;
     }
+  }
+
+  function openWhatsAppForm() {
+    contactMethod = 'whatsapp';
+    showContactForm = true;
+    setTimeout(() => {
+      document.getElementById('booking-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
   }
 
   function resetForm() {
@@ -100,7 +124,13 @@
       </div>
       <h3>We'll Be In Touch!</h3>
       <p>
-        Expect a {contactMethod === 'call' ? 'call' : contactMethod === 'whatsapp' ? 'WhatsApp message' : 'email'} within 30 minutes.
+        {#if contactMethod === 'whatsapp'}
+          Your WhatsApp chat should be open — we'll reply within 30 minutes.
+        {:else if contactMethod === 'call'}
+          Your call is connecting — if we miss you, we'll call back within 30 minutes.
+        {:else}
+          Expect an email from us within 30 minutes.
+        {/if}
       </p>
       <button class="btn btn-ghost" on:click={resetForm}>
         Make Another Inquiry
@@ -335,12 +365,14 @@
           >
             {#if contactMethod === 'whatsapp'}
               <MessageCircle size={20} />
+              {isSubmitting ? 'Sending...' : 'Open WhatsApp to Chat'}
             {:else if contactMethod === 'call'}
               <Phone size={20} />
+              {isSubmitting ? 'Sending...' : 'Confirm & Call Us'}
             {:else}
               <Mail size={20} />
+              {isSubmitting ? 'Sending...' : 'Send Email Inquiry'}
             {/if}
-            {isSubmitting ? 'Sending...' : 'Get Response in <30 min'}
           </button>
           {#if submitError}
             <p class="submit-error">{submitError}</p>
@@ -363,15 +395,10 @@
 
     <!-- Quick WhatsApp -->
     <div class="panel-footer">
-      <a 
-        href="https://wa.me/254714223041?text={encodeURIComponent(`Hi! I'm interested in booking with asis safaris  for ${totalTravelers} travelers.`)}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn whatsapp-btn"
-      >
+      <button class="btn whatsapp-btn" on:click={openWhatsAppForm}>
         <MessageCircle size={20} />
         Chat on WhatsApp Now
-      </a>
+      </button>
     </div>
   {/if}
 </aside>

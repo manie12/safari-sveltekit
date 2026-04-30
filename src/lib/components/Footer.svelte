@@ -1,12 +1,35 @@
 <script lang="ts">
   import { Phone, Mail, MapPin } from 'lucide-svelte';
 
-  const footerLinks = {
-    destinations: ['Masai Mara', 'Amboseli', 'Lake Nakuru', 'Diani Beach', 'Serengeti'],
-    safaris: ['Classic Safaris', 'Luxury Safaris', 'Family Adventures', 'Honeymoon', 'Custom'],
-    company: ['About Us', 'Our Team', 'Sustainability', 'Careers', 'Contact'],
-    support: ['FAQs', 'Travel Insurance', 'Visa Info', 'Packing Guide', 'Terms'],
-  };
+  const footerDestinations = [
+    { label: 'Masai Mara', href: '/safaris' },
+    { label: 'Amboseli', href: '/safaris' },
+    { label: 'Lake Nakuru', href: '/safaris' },
+    { label: 'Diani Beach', href: '/safaris' },
+    { label: 'Serengeti', href: '/safaris' },
+  ];
+
+  const footerSafaris = [
+    { label: 'Classic Safaris', href: '/safaris' },
+    { label: 'Luxury Safaris', href: '/safaris' },
+    { label: 'Family Adventures', href: '/safaris' },
+    { label: 'Honeymoon', href: '/safaris' },
+    { label: 'Custom', href: '/safaris' },
+  ];
+
+  const footerCompany = [
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Team', href: '/about' },
+    { label: 'Sustainability', href: '/about' },
+    { label: 'Contact', href: '/about#contact' },
+  ];
+
+  const footerSupport = [
+    { label: 'FAQs', href: '/about#contact' },
+    { label: 'Travel Insurance', href: '/about' },
+    { label: 'Visa Info', href: '/about' },
+    { label: 'Packing Guide', href: '/about' },
+  ];
 </script>
 
 <footer class="footer">
@@ -41,8 +64,8 @@
       <div class="footer-links-col">
         <h4>Destinations</h4>
         <ul>
-          {#each footerLinks.destinations as link}
-            <li><a href="/destinations/{link.toLowerCase().replace(' ', '-')}">{link}</a></li>
+          {#each footerDestinations as link}
+            <li><a href={link.href}>{link.label}</a></li>
           {/each}
         </ul>
       </div>
@@ -50,8 +73,8 @@
       <div class="footer-links-col">
         <h4>Safaris</h4>
         <ul>
-          {#each footerLinks.safaris as link}
-            <li><a href="/safaris">{link}</a></li>
+          {#each footerSafaris as link}
+            <li><a href={link.href}>{link.label}</a></li>
           {/each}
         </ul>
       </div>
@@ -59,8 +82,8 @@
       <div class="footer-links-col">
         <h4>Company</h4>
         <ul>
-          {#each footerLinks.company as link}
-            <li><a href="/{link.toLowerCase().replace(' ', '-')}">{link}</a></li>
+          {#each footerCompany as link}
+            <li><a href={link.href}>{link.label}</a></li>
           {/each}
         </ul>
       </div>
@@ -68,8 +91,8 @@
       <div class="footer-links-col">
         <h4>Support</h4>
         <ul>
-          {#each footerLinks.support as link}
-            <li><a href="/support">{link}</a></li>
+          {#each footerSupport as link}
+            <li><a href={link.href}>{link.label}</a></li>
           {/each}
         </ul>
       </div>
@@ -78,7 +101,7 @@
 
   <div class="footer-bottom">
     <div class="container footer-bottom-inner">
-      <span>© 2024 ASIS Safaris. All rights reserved.</span>
+      <span>© 2026 ASIS Safaris. All rights reserved.</span>
       <div class="footer-legal">
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>

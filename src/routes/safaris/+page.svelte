@@ -6,6 +6,47 @@
 <svelte:head>
   <title>Safari Packages | Asis Safaris — Kenya Safari Tours</title>
   <meta name="description" content="Browse Asis Safaris Kenya safari packages. Private 4x4 safaris to Masai Mara, Lake Nakuru, Amboseli and more. Expert local guides, full-board lodges, transparent pricing." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Safari Packages | Asis Safaris — Kenya Safari Tours" />
+  <meta property="og:description" content="Private 4x4 safaris to Masai Mara, Lake Nakuru, Amboseli and more. Expert local guides, full-board lodges, transparent pricing." />
+  <meta property="og:image" content="https://asissafaris.com/IMG-20250908-WA0011.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asissafaris.com/safaris" />
+  <meta property="og:site_name" content="Asis Safaris" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Safari Packages | Asis Safaris — Kenya Safari Tours" />
+  <meta name="twitter:description" content="Private 4x4 safaris to Masai Mara, Lake Nakuru, Amboseli and more. Expert local guides, full-board lodges." />
+  <meta name="twitter:image" content="https://asissafaris.com/IMG-20250908-WA0011.jpg" />
+
+  <link rel="canonical" href="https://asissafaris.com/safaris" />
+
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Kenya Safari Packages — Asis Safaris",
+    "url": "https://asissafaris.com/safaris",
+    "description": "Browse our selection of private Kenya safari packages led by local expert guides.",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "TouristTrip",
+          "name": "Kenya Classic Safari — 7 Days",
+          "url": "https://asissafaris.com/",
+          "description": "Seven days through Nairobi, Lake Nakuru, and the Masai Mara in a private 4x4 with a dedicated local guide.",
+          "offers": {
+            "@type": "Offer",
+            "price": "2850",
+            "priceCurrency": "USD"
+          }
+        }
+      }
+    ]
+  })}</script>`}
 </svelte:head>
 
 <div class="page">
@@ -67,12 +108,7 @@
                   <Mail size={16} />
                   Email
                 </a>
-                <a
-                  href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20{encodeURIComponent(pkg.name)}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-primary"
-                >
+                <a href="/?method=whatsapp#booking-panel" class="btn btn-primary">
                   <MessageCircle size={16} />
                   WhatsApp
                 </a>
@@ -97,12 +133,7 @@
           <Mail size={18} />
           Email Inquiry
         </a>
-        <a
-          href="https://wa.me/254714223041?text=Hi%2C%20I'd%20like%20a%20custom%20safari%20itinerary"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
+        <a href="/?method=whatsapp#booking-panel" class="btn btn-primary">
           <MessageCircle size={18} />
           Build a Custom Safari
         </a>

@@ -103,11 +103,163 @@
   <title>{safariPackage.name} | Asis Safaris — Kenya Safari Tours</title>
   <meta name="description" content="Book the Kenya Classic Safari with Asis Safaris — 7 days through Nairobi, Lake Nakuru, and the Masai Mara. Expert local guides, private 4x4 vehicles, full-board lodges. From $2,850 per person." />
   <meta name="keywords" content="Kenya safari, Masai Mara safari, Kenya classic safari tour, Lake Nakuru, Nairobi safari, Africa wildlife tour, Kenya safari packages, Asis Safaris" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="{safariPackage.name} | Asis Safaris" />
   <meta property="og:description" content="7-day Kenya safari through Nairobi, Lake Nakuru & Masai Mara. Private vehicle, expert guides, full board. From $2,850." />
-  <meta property="og:image" content={safariPackage.heroImage} />
+  <meta property="og:image" content="https://asissafaris.com{safariPackage.heroImage}" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://asissafaris.com/safaris/kenya-classic-safari" />
+  <meta property="og:url" content="https://asissafaris.com/" />
+  <meta property="og:site_name" content="Asis Safaris" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{safariPackage.name} | Asis Safaris" />
+  <meta name="twitter:description" content="7-day Kenya safari through Nairobi, Lake Nakuru & Masai Mara. Private vehicle, expert guides, full board. From $2,850." />
+  <meta name="twitter:image" content="https://asissafaris.com{safariPackage.heroImage}" />
+
+  <link rel="canonical" href="https://asissafaris.com/" />
+
+  <!-- JSON-LD: LocalBusiness -->
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Asis Safaris",
+    "url": "https://asissafaris.com",
+    "logo": "https://asissafaris.com/IMG-20250908-WA0010.jpg",
+    "image": "https://asissafaris.com/IMG-20250908-WA0011.jpg",
+    "description": "Asis Safaris is a Kenya-based safari company offering authentic wildlife experiences in the Masai Mara, Lake Nakuru, and Amboseli. Licensed, insured, and local since 2018.",
+    "telephone": "+254714223041",
+    "email": "asissafaris@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.286389,
+      "longitude": 36.817223
+    },
+    "openingHours": "Mo-Su 06:00-21:00",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "47",
+      "bestRating": "5"
+    },
+    "sameAs": [
+      "https://wa.me/254714223041"
+    ]
+  })}</script>`}
+
+  <!-- JSON-LD: TouristTrip -->
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Kenya Classic Safari — 7 Days",
+    "description": "Seven days through Kenya's most iconic wilderness — Nairobi, Lake Nakuru, and the Masai Mara. Private 4x4 vehicle, expert local guide, full-board lodges.",
+    "url": "https://asissafaris.com/",
+    "image": "https://asissafaris.com/IMG-20250908-WA0011.jpg",
+    "provider": {
+      "@type": "TravelAgency",
+      "name": "Asis Safaris",
+      "url": "https://asissafaris.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "2850",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://asissafaris.com/",
+      "description": "Per person, all-inclusive"
+    },
+    "touristType": "Wildlife & Nature Travelers",
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Nairobi — Nairobi National Park" },
+        { "@type": "ListItem", "position": 2, "name": "Lake Nakuru National Park" },
+        { "@type": "ListItem", "position": 3, "name": "Masai Mara National Reserve" }
+      ]
+    }
+  })}</script>`}
+
+  <!-- JSON-LD: Reviews -->
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Kenya Classic Safari — Asis Safaris",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Sarah & Tom W." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Asis Safaris exceeded every expectation. Our guide knew exactly where to find the big cats and was incredibly knowledgeable. The Mara at sunrise was something we'll never forget.",
+        "datePublished": "2024-10-15"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "James K." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "From the airport pickup to the farewell dinner, every detail was handled professionally. Saw lions, leopard, cheetah, and the wildebeest crossing — all in one week.",
+        "datePublished": "2024-08-22"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Annelies V." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+        "reviewBody": "Booked through WhatsApp and everything was seamless. Small group, private vehicle, and a guide who felt like a friend by Day 2.",
+        "datePublished": "2025-01-10"
+      }
+    ]
+  })}</script>`}
+
+  <!-- JSON-LD: FAQPage -->
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is included in the Kenya Classic Safari?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Kenya Classic Safari includes airport transfers, a private 4x4 safari vehicle, a dedicated local guide, full-board accommodation at hand-selected lodges, all park entry fees, and game drives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When is the best time to visit the Masai Mara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best time to visit the Masai Mara is between July and October for the Great Wildebeest Migration. However, wildlife viewing is excellent year-round with Asis Safaris guiding you to the right spots."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a safari with Asis Safaris?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply fill in our inquiry form on the website or send us a WhatsApp message on +254 714 223 041. We respond within 30 minutes with a tailored itinerary and quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a deposit required to book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No payment is required to inquire. Once you confirm your safari, a 30% deposit secures your dates. The balance is due 30 days before departure."
+        }
+      }
+    ]
+  })}</script>`}
 </svelte:head>
 
 <div class="page">
@@ -153,12 +305,7 @@
       </div>
 
       <div class="hero-ctas">
-        <a
-          href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20the%20Kenya%20Classic%20Safari"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary hero-cta-btn"
-        >
+        <a href="/?method=whatsapp#booking-panel" class="btn btn-primary hero-cta-btn">
           <MessageCircle size={18} />
           Plan My Safari
         </a>
@@ -166,7 +313,7 @@
           <Mail size={18} />
           Email Inquiry
         </a>
-        <a href="tel:+254714223041" class="btn btn-glass">
+        <a href="/?method=call#booking-panel" class="btn btn-glass">
           <Phone size={18} />
           Call Us Now
         </a>
@@ -434,12 +581,7 @@
       <span class="mobile-price-value">${safariPackage.startingPrice.toLocaleString()}</span>
       <span class="mobile-price-hint">/ person</span>
     </div>
-    <a
-      href="https://wa.me/254714223041?text=Hi%2C%20I'm%20interested%20in%20the%20Kenya%20Classic%20Safari"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-primary mobile-cta-btn"
-    >
+    <a href="/?method=whatsapp#booking-panel" class="btn btn-primary mobile-cta-btn">
       <MessageCircle size={18} />
       Plan My Safari
     </a>

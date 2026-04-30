@@ -5,6 +5,41 @@
 <svelte:head>
   <title>About Asis Safaris | Kenya Safari Experts Since 2018</title>
   <meta name="description" content="Asis Safaris is a Kenya-based safari company led by local guides with deep knowledge of the Masai Mara, Lake Nakuru, and beyond. Transparent pricing, personal service, licensed & insured." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Asis Safaris | Kenya Safari Experts Since 2018" />
+  <meta property="og:description" content="A Kenya-born safari company built on local knowledge, honest service, and a genuine love for the wild. Licensed & insured since 2018." />
+  <meta property="og:image" content="https://asissafaris.com/IMG-20250908-WA0011.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asissafaris.com/about" />
+  <meta property="og:site_name" content="Asis Safaris" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Asis Safaris | Kenya Safari Experts Since 2018" />
+  <meta name="twitter:description" content="A Kenya-born safari company built on local knowledge, honest service, and a genuine love for the wild." />
+  <meta name="twitter:image" content="https://asissafaris.com/IMG-20250908-WA0011.jpg" />
+
+  <link rel="canonical" href="https://asissafaris.com/about" />
+
+  {@html `<script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Asis Safaris",
+    "url": "https://asissafaris.com",
+    "foundingDate": "2018",
+    "description": "Asis Safaris is a Kenya-based safari company led by local guides with deep knowledge of the Masai Mara, Lake Nakuru, Amboseli and beyond.",
+    "telephone": "+254714223041",
+    "email": "asissafaris@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": 10 },
+    "areaServed": ["Kenya", "Tanzania", "East Africa"],
+    "knowsAbout": ["Wildlife Safari", "Masai Mara", "Lake Nakuru", "Amboseli", "Big Five"]
+  })}</script>`}
 </svelte:head>
 
 <div class="page">
@@ -155,14 +190,14 @@
         <p>Most enquiries receive a response within 30 minutes during business hours (EAT, GMT+3).</p>
 
         <div class="contact-methods">
-          <a href="https://wa.me/254714223041" target="_blank" rel="noopener noreferrer" class="contact-method">
+          <a href="/?method=whatsapp#booking-panel" class="contact-method">
             <MessageCircle size={20} />
             <div>
               <span class="method-label">WhatsApp (Fastest)</span>
               <span class="method-value">+254 714 223 041</span>
             </div>
           </a>
-          <a href="tel:+254714223041" class="contact-method">
+          <a href="/?method=call#booking-panel" class="contact-method">
             <Phone size={20} />
             <div>
               <span class="method-label">Phone</span>
@@ -189,12 +224,7 @@
       <div class="contact-cta-card">
         <h3>Ready to Plan Your Safari?</h3>
         <p>Tell us your travel dates, group size, and any interests — we'll come back with a tailored itinerary and honest quote.</p>
-        <a
-          href="https://wa.me/254714223041?text=Hi%2C%20I'd%20like%20to%20plan%20a%20Kenya%20safari.%20My%20dates%20are%20"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary contact-btn"
-        >
+        <a href="/?method=whatsapp#booking-panel" class="btn btn-primary contact-btn">
           <MessageCircle size={18} />
           Start Planning on WhatsApp
         </a>
@@ -202,7 +232,7 @@
           <Mail size={18} />
           Email Inquiry
         </a>
-        <a href="tel:+254714223041" class="btn btn-outline contact-btn">
+        <a href="/?method=call#booking-panel" class="btn btn-outline contact-btn">
           <Phone size={18} />
           Call Us Directly
         </a>
